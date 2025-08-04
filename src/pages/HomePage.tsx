@@ -6,84 +6,6 @@ import { FeatureCard } from "@/components/FeatureCard";
 import { TestimonialCard } from "@/components/TestimonialCard";
 import { ArrowRight, Calendar, Play, Users, MessageCircle, Star } from "lucide-react";
 import SEO from '@/components/SEO';
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import lottie from "lottie-web";
-
-const HeroParticles = () => {
-  const canvasRef = useRef(null);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext("2d");
-    let animationId;
-    const dpr = window.devicePixelRatio || 1;
-    let width = window.innerWidth;
-    let height = 600;
-    canvas.width = width * dpr;
-    canvas.height = height * dpr;
-    ctx.scale(dpr, dpr);
-    const particles = Array.from({ length: 60 }, () => ({
-      x: Math.random() * width,
-      y: Math.random() * height,
-      r: Math.random() * 1.5 + 0.5,
-      dx: (Math.random() - 0.5) * 0.2,
-      dy: (Math.random() - 0.5) * 0.2,
-      o: Math.random() * 0.5 + 0.3,
-    }));
-    function draw() {
-      ctx.clearRect(0, 0, width, height);
-      for (const p of particles) {
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.r, 0, 2 * Math.PI);
-        ctx.fillStyle = `rgba(124,58,237,${p.o})`;
-        ctx.shadowColor = '#2563EB';
-        ctx.shadowBlur = 8;
-        ctx.fill();
-        p.x += p.dx;
-        p.y += p.dy;
-        if (p.x < 0 || p.x > width) p.dx *= -1;
-        if (p.y < 0 || p.y > height) p.dy *= -1;
-      }
-      animationId = requestAnimationFrame(draw);
-    }
-    draw();
-    return () => cancelAnimationFrame(animationId);
-  }, []);
-  return <canvas ref={canvasRef} className="absolute inset-0 w-full h-[600px] z-0 pointer-events-none" style={{top:0,left:0}} />;
-};
-
-const HeroSpotlight = () => {
-  const spotlightRef = useRef(null);
-  useEffect(() => {
-    const handleMove = (e) => {
-      const x = e.clientX;
-      const y = e.clientY;
-      if (spotlightRef.current) {
-        spotlightRef.current.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(255,255,255,0.18) 0%, transparent 60%)`;
-      }
-    };
-    window.addEventListener('mousemove', handleMove);
-    return () => window.removeEventListener('mousemove', handleMove);
-  }, []);
-  return <div ref={spotlightRef} className="absolute inset-0 z-20 pointer-events-none transition-all duration-200" />;
-};
-
-const HeroLottie = () => {
-  const lottieRef = useRef(null);
-  useEffect(() => {
-    const anim = lottie.loadAnimation({
-      container: lottieRef.current,
-      renderer: 'svg',
-      loop: true,
-      autoplay: true,
-      path: '#', // Example: finance/tech animation
-    });
-    return () => anim.destroy();
-  }, []);
-  return <div ref={lottieRef} className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 z-30 pointer-events-none opacity-80" />;
-};
 
 const HomePage: React.FC = () => {
   const structuredData = {
@@ -130,31 +52,6 @@ const HomePage: React.FC = () => {
     }
   ];
 
-  useEffect(() => {
-    const tilt = document.querySelector('.hero-tilt');
-    if (!tilt) return;
-    let requestId;
-    const handleMove = (e) => {
-      const rect = tilt.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      const cx = rect.width / 2;
-      const cy = rect.height / 2;
-      const dx = (x - cx) / cx;
-      const dy = (y - cy) / cy;
-      gsap.to(tilt, { rotateY: dx * 10, rotateX: -dy * 10, duration: 0.4, ease: 'power2.out' });
-    };
-    const handleLeave = () => {
-      gsap.to(tilt, { rotateY: 0, rotateX: 0, duration: 0.6, ease: 'power2.out' });
-    };
-    tilt.addEventListener('mousemove', handleMove);
-    tilt.addEventListener('mouseleave', handleLeave);
-    return () => {
-      tilt.removeEventListener('mousemove', handleMove);
-      tilt.removeEventListener('mouseleave', handleLeave);
-    };
-  }, []);
-
   return (
     <>
       <SEO
@@ -166,94 +63,41 @@ const HomePage: React.FC = () => {
       />
     <div>
       {/* Hero Section */}
-        <section className="relative pt-16 pb-24 md:pt-24 md:pb-32 overflow-hidden min-h-[600px] flex items-center">
-          {/* Particle Background */}
-          <HeroParticles />
-          {/* Background Video with Parallax */}
-          <div className="absolute inset-0 w-full h-full z-0 will-change-transform" style={{transform: 'translateY(-10px)'}}>
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-full object-cover"
-              poster="https://images.pexels.com/videos/856107/pexels-photo-856107.jpeg?auto=compress&w=1200&h=800&fit=crop"
+      <section className="relative h-screen w-full flex items-center overflow-hidden">
+        <img
+          src="/images/comp.jpg"
+          alt="Professional using a device"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="relative z-10 container mx-auto px-6 md:px-12">
+          <div className="max-w-xl text-white text-center md:text-left animate-in fade-in slide-in-from-bottom-2">
+            <p className="mb-2 text-base md:text-lg font-semibold text-white/90">
+              MyAccurateBooks Accounting Software
+            </p>
+            <h1 className="mb-2 text-4xl md:text-6xl font-bold">One platform</h1>
+            <h2 className="mb-6 text-2xl md:text-4xl font-bold text-white/90">
+              Built for business owners
+            </h2>
+            <p className="mb-8 text-lg md:text-xl text-white/90">
+              Accounting is just the start. Manage sales, track stock, send invoices, get paid, and grow—all in one powerful
+              platform made for Kenyan businesses.
+            </p>
+            <Button
+              asChild
+              className="bg-green-600 hover:bg-green-700 text-white rounded-full font-bold px-8 py-6"
             >
-              <source src="https://videos.pexels.com/video-files/856107/856107-hd_1920_1080_25fps.mp4" type="video/mp4" />
-            </video>
-            <div className="absolute inset-0 bg-gradient-to-r from-accurate-purple-900/80 via-accurate-blue-900/70 to-accurate-blue-700/60"></div>
-          </div>
-          {/* Mouse-following spotlight */}
-          <HeroSpotlight />
-          {/* Lottie Animation */}
-          <HeroLottie />
-          {/* Floating SVG 3D shapes */}
-          <svg className="absolute top-[-80px] left-[-80px] w-96 h-96 opacity-40 z-10 animate-spin-slow" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="200" cy="200" r="180" fill="#7C3AED" />
-          </svg>
-          <svg className="absolute bottom-[-60px] right-[-60px] w-80 h-80 opacity-30 z-10 animate-pulse" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <ellipse cx="200" cy="200" rx="160" ry="120" fill="#2563EB" />
-          </svg>
-          {/* Custom SVG Illustration */}
-          <svg className="absolute right-1/4 top-24 w-40 h-40 z-20 opacity-60 animate-bounce-slow" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M50 100 Q100 0 150 100 T250 100" stroke="#fff" strokeWidth="8" fill="none" />
-            <circle cx="100" cy="100" r="30" fill="#fff" fillOpacity="0.15" />
-          </svg>
-          {/* Main Content */}
-          <div className="container relative z-30">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-              <div className="md:pr-8 animate-on-scroll text-white">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 text-balance relative">
-                  <span className="bg-clip-text text-transparent bg-gradient-to-r from-accurate-purple-200 via-white to-accurate-blue-200 animate-gradient-x inline-block relative">
-                    Simplify
-                    <span className="absolute left-0 bottom-0 w-full h-2 bg-gradient-to-r from-accurate-purple-400 to-accurate-blue-400 rounded-full blur-md opacity-60 animate-pulse" />
-                  </span> Your Business Finances
-              </h1>
-                <p className="text-xl mb-8 text-balance opacity-90">
-                MyAccurate Books is an intuitive cloud-based accounting solution designed for small and medium-sized enterprises without requiring prior accounting knowledge.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                  <Button size="lg" asChild className="relative bg-gradient-to-r from-accurate-purple-600 to-accurate-blue-600 text-white hover:from-accurate-purple-700 hover:to-accurate-blue-700 shadow-lg hover:shadow-xl transition-all duration-300 animate-glow">
-                  <Link to="/pricing">Get Started</Link>
-                </Button>
-                <Button size="lg" variant="outline" asChild className="border-2 border-white text-white hover:bg-white/10 hover:border-white/80 transition-all duration-300">
-                  <Link to="/features">Explore Features</Link>
-                </Button>
-              </div>
-              <div className="mt-12">
-                  <p className="text-sm font-medium mb-3 opacity-80">
-                  TRUSTED BY BUSINESSES ACROSS AFRICA
-                </p>
-                <div className="flex flex-wrap gap-8 items-center">
-                    <div className="bg-white/80 shadow-sm rounded p-2 opacity-90 hover:scale-105 hover:shadow-2xl hover:ring-2 hover:ring-blue-400 transition-all duration-300">
-                      <span className="font-medium text-gray-700">Nairobi Crafts</span>
-                    </div>
-                    <div className="bg-white/80 shadow-sm rounded p-2 opacity-90 hover:scale-105 hover:shadow-2xl hover:ring-2 hover:ring-purple-400 transition-all duration-300">
-                      <span className="font-medium text-gray-700">Tech Solutions Ltd</span>
-                  </div>
-                    <div className="bg-white/80 shadow-sm rounded p-2 opacity-90 hover:scale-105 hover:shadow-2xl hover:ring-2 hover:ring-blue-400 transition-all duration-300">
-                      <span className="font-medium text-gray-700">Coastal Supplies</span>
-                  </div>
-                  </div>
-                </div>
-              </div>
-              <div className="animate-on-scroll relative z-30">
-                <div className="relative group hero-tilt">
-                  <div className="absolute inset-0 bg-gradient-to-r from-accurate-purple-200/60 to-accurate-blue-200/60 rounded-lg transform rotate-1"></div>
-                  <div className="bg-white rounded-lg shadow-xl overflow-hidden border border-gray-100 relative group-hover:scale-105 group-hover:shadow-blue-400/40 transition-all duration-300">
-                  <img
-                    src="https://core.myaccuratebook.com/files/uploads/1752226832129-accessible_anywhere_any_time__100_x_100_px_.png"
-                    alt="MyAccurate Books dashboard preview"
-                    className="w-full h-auto object-cover"
-                  />
-                </div>
-                <div className="absolute -bottom-4 -right-4 bg-accurate-purple-600 text-white rounded-lg p-4 shadow-lg">
-                  <p className="font-bold">No accounting knowledge required!</p>
-                </div>
-              </div>
-            </div>
+              <Link to="/pricing">Explore plans &amp; pricing</Link>
+            </Button>
           </div>
         </div>
+        <Link
+          to="/contact"
+          className="fixed bottom-24 right-6 z-50 bg-green-600 hover:bg-green-700 text-white p-4 rounded-full shadow-lg transition-colors"
+          aria-label="Chat with a sales expert"
+        >
+          <MessageCircle className="w-5 h-5" />
+        </Link>
       </section>
 
       {/* Features Section */}
