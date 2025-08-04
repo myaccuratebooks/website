@@ -1,0 +1,81 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+Allow: /features/sales-management/
+Allow: /features/inventory-control/
+Allow: /features/financial-accounting/
+Allow: /features/business-reports/
+Allow: /blog/category/sales-tips/
+Allow: /blog/category/inventory-management/
+Allow: /blog/category/accounting-best-practices/
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /temp/
+Disallow: /draft/
+Disallow: /test/
+
+# Sitemap location
+Sitemap: https://myaccuratebooks.com/sitemap.xml
+
+# Crawl-delay for all bots
+Crawl-delay: 10
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+Allow: /features/sales-management/
+Allow: /features/inventory-control/
+Allow: /features/financial-accounting/
+Allow: /features/business-reports/
+Allow: /blog/category/sales-tips/
+Allow: /blog/category/inventory-management/
+Allow: /blog/category/accounting-best-practices/
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Allow: /features/sales-management/
+Allow: /features/inventory-control/
+Allow: /features/financial-accounting/
+Allow: /features/business-reports/
+Allow: /blog/category/sales-tips/
+Allow: /blog/category/inventory-management/
+Allow: /blog/category/accounting-best-practices/
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Allow: /features/sales-management/
+Allow: /features/inventory-control/
+Allow: /features/financial-accounting/
+Allow: /features/business-reports/
+Allow: /blog/category/sales-tips/
+Allow: /blog/category/inventory-management/
+Allow: /blog/category/accounting-best-practices/
+Crawl-delay: 1
+
+# Block AI crawlers
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+# Block archive.org
+User-agent: archive.org_bot
+Disallow: /
+
+User-agent: ia_archiver
+Disallow: /

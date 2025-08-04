@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
+        http://www.google.com/schemas/sitemap-image/1.1
+        http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd">
+
+  <!-- Home Page -->
+  <url>
+    <loc>https://www.myaccuratebook.com/</loc>
+    <lastmod>2024-03-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.myaccuratebook.com/images/hero-image.png</image:loc>
+      <image:title>MyAccurate Books - Complete Business Management Software | Sales, Inventory &amp; Accounting</image:title>
+      <image:caption>All-in-one business management software with sales tracking, inventory management, and comprehensive accounting features</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Features Page -->
+  <url>
+    <loc>https://www.myaccuratebook.com/features</loc>
+    <lastmod>2024-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.myaccuratebook.com/images/features-hero.png</image:loc>
+      <image:title>MyAccurate Books Features | Sales Management, Inventory Control &amp; Financial Accounting</image:title>
+      <image:caption>Comprehensive business management features including sales tracking, inventory control, and financial accounting</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Pricing Page -->
+  <url>
+    <loc>https://www.myaccuratebook.com/pricing</loc>
+    <lastmod>2024-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.myaccuratebook.com/images/pricing-hero.png</image:loc>
+      <image:title>MyAccurate Books Pricing | Affordable Business Management Software for SMEs</image:title>
+      <image:caption>Flexible pricing plans for small and medium enterprises, including sales, inventory, and accounting features</image:caption>
+    </image:image>
+  </url>
+
+  <!-- About Page -->
+  <url>
+    <loc>https://www.myaccuratebook.com/about</loc>
+    <lastmod>2024-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.myaccuratebook.com/images/about-hero.png</image:loc>
+      <image:title>About MyAccurate Books | Leading Business Management Software Provider</image:title>
+      <image:caption>Trusted by businesses for sales management, inventory control, and financial accounting solutions</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Testimonials Page -->
+  <url>
+    <loc>https://www.myaccuratebook.com/testimonials</loc>
+    <lastmod>2024-03-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.myaccuratebook.com/images/testimonials-hero.png</image:loc>
+      <image:title>MyAccurate Books Client Success Stories | Business Management Solutions</image:title>
+      <image:caption>Real success stories from businesses using our sales, inventory, and accounting management software</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Blog Page -->
+  <url>
+    <loc>https://www.myaccuratebook.com/blog</loc>
+    <lastmod>2024-03-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.myaccuratebook.com/images/blog-hero.png</image:loc>
+      <image:title>MyAccurate Books Blog | Sales Tips, Inventory Management &amp; Accounting Best Practices</image:title>
+      <image:caption>Expert insights on sales management, inventory control, and financial accounting for businesses</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://www.myaccuratebook.com/contact</loc>
+    <lastmod>2024-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.myaccuratebook.com/images/contact-hero.png</image:loc>
+      <image:title>Contact MyAccurate Books | Get Support for Your Business Management Needs</image:title>
+      <image:caption>Expert support for sales tracking, inventory management, and financial accounting software</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Demo Page -->
+  <url>
+    <loc>https://www.myaccuratebook.com/demo</loc>
+    <lastmod>2024-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://www.myaccuratebook.com/images/demo-hero.png</image:loc>
+      <image:title>Try MyAccurate Books | Free Demo of Business Management Software</image:title>
+      <image:caption>Experience our sales tracking, inventory management, and financial accounting features firsthand</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Privacy Policy Page -->
+  <url>
+    <loc>https://www.myaccuratebook.com/privacy-policy</loc>
+    <lastmod>2024-03-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset> 
