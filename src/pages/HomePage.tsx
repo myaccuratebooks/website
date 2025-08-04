@@ -63,32 +63,7 @@ const HomePage: React.FC = () => {
       />
     <div>
       {/* Hero Section */}
-      <section className="relative h-screen w-full flex items-center overflow-hidden">
-        <img
-          src="/images/comp.jpg"
-          alt="Professional using a device"
-          className="absolute inset-0 h-full w-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-10 container mx-auto px-6 md:px-12">
-          <div className="max-w-xl text-white text-center md:text-left animate-in fade-in slide-in-from-bottom-2">
-            <p className="mb-2 text-base md:text-lg font-semibold text-white/90">
-              MyAccurateBooks Accounting Software
-            </p>
-            <h1 className="mb-2 text-4xl md:text-6xl font-bold">One platform</h1>
-            <h2 className="mb-6 text-2xl md:text-4xl font-bold text-white/90">
-              Built for business owners
-            </h2>
-            <p className="mb-8 text-lg md:text-xl text-white/90">
-              Accounting is just the start. Manage sales, track stock, send invoices, get paid, and grow—all in one powerful
-              platform made for Kenyan businesses.
-            </p>
-            <Button
-              asChild
-              className="bg-green-600 hover:bg-green-700 text-white rounded-full font-bold px-8 py-6"
-            >
-              <Link to="/pricing">Explore plans &amp; pricing</Link>
-            </Button>
+
           </div>
         </div>
         <Link
