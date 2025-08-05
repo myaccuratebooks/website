@@ -63,7 +63,25 @@ const HomePage: React.FC = () => {
       />
     <div>
       {/* Hero Section */}
-
+      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-accurate-purple-50 to-accurate-blue-50 overflow-hidden">
+        <div className="absolute inset-0 bg-white/50"></div>
+        <div className="container relative z-10 text-center">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 animate-on-scroll">
+              Simplify Your Business
+              <span className="text-accurate-purple-600"> Accounting</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-700 mb-8 animate-on-scroll" style={{ animationDelay: "0.2s" }}>
+              MyAccurate Books is the all-in-one accounting solution designed specifically for SMEs across Africa.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center animate-on-scroll" style={{ animationDelay: "0.4s" }}>
+              <Button size="lg" asChild>
+                <Link to="/pricing">Start Free Trial</Link>
+              </Button>
+              <Button size="lg" variant="outline" asChild>
+                <Link to="/demo">Watch Demo</Link>
+              </Button>
+            </div>
           </div>
         </div>
         <Link
