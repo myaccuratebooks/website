@@ -63,34 +63,241 @@ const HomePage: React.FC = () => {
       />
     <div>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-accurate-purple-50 to-accurate-blue-50 overflow-hidden">
-        <div className="absolute inset-0 bg-white/50"></div>
-        <div className="container relative z-10 text-center">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 animate-on-scroll">
-              Simplify Your Business
-              <span className="text-accurate-purple-600"> Accounting</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-700 mb-8 animate-on-scroll" style={{ animationDelay: "0.2s" }}>
-              MyAccurate Books is the all-in-one accounting solution designed specifically for SMEs across Africa.
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center animate-on-scroll" style={{ animationDelay: "0.4s" }}>
-              <Button size="lg" asChild>
-                <Link to="/pricing">Start Free Trial</Link>
-              </Button>
-              <Button size="lg" variant="outline" asChild>
-                <Link to="/demo">Watch Demo</Link>
-              </Button>
+      <section className="relative min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `radial-gradient(circle at 25% 25%, white 2px, transparent 2px), radial-gradient(circle at 75% 75%, white 2px, transparent 2px)`,
+            backgroundSize: '50px 50px'
+          }}></div>
+        </div>
+        
+        {/* Floating Elements */}
+        <div className="absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-16 h-16 bg-yellow-400/20 rounded-full animate-bounce"></div>
+        <div className="absolute bottom-40 left-20 w-12 h-12 bg-white/10 rounded-full animate-pulse" style={{ animationDelay: "1s" }}></div>
+        
+        <div className="container relative z-10 pt-20 pb-16">
+          <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
+            {/* Left Content */}
+            <div className="text-white space-y-8">
+              <div className="animate-on-scroll">
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+                  Comprehensive
+                  <span className="block text-yellow-400">accounting software</span>
+                  <span className="block">for growing businesses</span>
+                </h1>
+              </div>
+              
+              <div className="animate-on-scroll" style={{ animationDelay: "0.2s" }}>
+                <p className="text-xl md:text-2xl text-blue-100 leading-relaxed">
+                  Powerful accounting software that helps you send invoices, track inventory, manage cashflow, and streamline your business operations across Africa.
+                </p>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-4 animate-on-scroll" style={{ animationDelay: "0.4s" }}>
+                <Button 
+                  size="xl" 
+                  className="bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-semibold px-8 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
+                  asChild
+                >
+                  <Link to="/pricing">Start my free trial</Link>
+                </Button>
+                <Button 
+                  size="xl" 
+                  variant="outline" 
+                  className="border-2 border-white text-white hover:bg-white hover:text-blue-700 font-semibold px-8 py-4 rounded-lg transition-all"
+                  asChild
+                >
+                  <Link to="/demo">Request a demo</Link>
+                </Button>
+              </div>
+              
+              {/* Key Features Pills */}
+              <div className="flex flex-wrap gap-3 animate-on-scroll" style={{ animationDelay: "0.6s" }}>
+                <span className="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium">
+                  📊 Real-time Dashboard
+                </span>
+                <span className="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium">
+                  💳 M-Pesa Integration
+                </span>
+                <span className="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium">
+                  📱 Mobile & Web App
+                </span>
+                <span className="bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium">
+                  🏪 Multi-Branch Support
+                </span>
+              </div>
+            </div>
+            
+            {/* Right Content - Dashboard Preview */}
+            <div className="relative animate-on-scroll" style={{ animationDelay: "0.3s" }}>
+              {/* Desktop Dashboard */}
+              <div className="relative bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200 transform hover:scale-105 transition-all duration-500">
+                {/* Browser Header */}
+                <div className="bg-gray-100 px-4 py-3 flex items-center gap-2 border-b">
+                  <div className="flex gap-2">
+                    <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+                    <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                    <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                  </div>
+                  <div className="flex-1 bg-white rounded-md px-3 py-1 text-sm text-gray-600 ml-4">
+                    app.myaccuratebook.com
+                  </div>
+                </div>
+                
+                {/* Dashboard Content */}
+                <div className="p-6 bg-gradient-to-br from-gray-50 to-white">
+                  {/* Header */}
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="flex items-center gap-3">
+                      <img src="/images/logo.png" alt="MyAccurate Books" className="h-8 w-auto" />
+                      <span className="text-lg font-semibold text-gray-800">Dashboard</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
+                        <span className="text-blue-600 text-sm font-medium">👤</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Key Metrics Cards */}
+                  <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                    <div className="bg-gradient-to-r from-blue-500 to-blue-600 text-white p-4 rounded-lg">
+                      <div className="text-sm opacity-90">Sales</div>
+                      <div className="text-2xl font-bold">KES 0</div>
+                      <div className="text-xs opacity-75 flex items-center gap-1">
+                        <span className="text-green-300">↗ 0%</span> from last month
+                      </div>
+                    </div>
+                    <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white p-4 rounded-lg">
+                      <div className="text-sm opacity-90">Expenses</div>
+                      <div className="text-2xl font-bold">KES 0</div>
+                      <div className="text-xs opacity-75 flex items-center gap-1">
+                        <span className="text-red-300">↗ 0%</span> from last month
+                      </div>
+                    </div>
+                    <div className="bg-gradient-to-r from-green-500 to-green-600 text-white p-4 rounded-lg">
+                      <div className="text-sm opacity-90">Purchases</div>
+                      <div className="text-2xl font-bold">KES 0</div>
+                      <div className="text-xs opacity-75 flex items-center gap-1">
+                        <span className="text-red-300">↗ 0%</span> from last month
+                      </div>
+                    </div>
+                    <div className="bg-gradient-to-r from-red-500 to-orange-500 text-white p-4 rounded-lg">
+                      <div className="text-sm opacity-90">Profit/Loss</div>
+                      <div className="text-2xl font-bold">KES 0</div>
+                      <div className="text-xs opacity-75">Cost of Goods: KES 0</div>
+                    </div>
+                  </div>
+                  
+                  {/* Charts Section */}
+                  <div className="grid lg:grid-cols-2 gap-4">
+                    <div className="bg-white p-4 rounded-lg border border-gray-200">
+                      <div className="flex items-center justify-between mb-3">
+                        <h3 className="font-semibold text-gray-800">Sales Performance</h3>
+                        <div className="text-sm text-gray-500">Weekly Sales • Aug 3 - Aug 9, 2025</div>
+                      </div>
+                      <div className="h-32 bg-gray-50 rounded flex items-center justify-center">
+                        <div className="text-gray-400 text-sm">📈 Sales Chart</div>
+                      </div>
+                    </div>
+                    <div className="bg-white p-4 rounded-lg border border-gray-200">
+                      <h3 className="font-semibold text-gray-800 mb-3">Recent Activity</h3>
+                      <div className="space-y-2">
+                        <div className="flex items-center gap-3 text-sm">
+                          <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                          <span className="text-gray-600">New invoice created</span>
+                        </div>
+                        <div className="flex items-center gap-3 text-sm">
+                          <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                          <span className="text-gray-600">Payment received</span>
+                        </div>
+                        <div className="flex items-center gap-3 text-sm">
+                          <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                          <span className="text-gray-600">Expense recorded</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Mobile App Preview */}
+              <div className="absolute -bottom-8 -right-8 lg:-right-12 w-32 lg:w-40 transform rotate-12 hover:rotate-6 transition-all duration-500">
+                <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200">
+                  {/* Mobile Header */}
+                  <div className="bg-blue-600 text-white p-3 text-center">
+                    <div className="text-sm font-medium">MyAccurate Pay</div>
+                    <div className="text-xs opacity-75">NEW</div>
+                  </div>
+                  
+                  {/* Mobile Content */}
+                  <div className="p-3 space-y-2">
+                    <div className="flex items-center gap-2 text-xs">
+                      <div className="w-4 h-4 bg-blue-100 rounded flex items-center justify-center">
+                        <span className="text-blue-600">📊</span>
+                      </div>
+                      <span className="text-gray-700">Dashboard</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-xs">
+                      <div className="w-4 h-4 bg-gray-100 rounded flex items-center justify-center">
+                        <span className="text-gray-600">🛍️</span>
+                      </div>
+                      <span className="text-gray-700">Products & Services</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-xs">
+                      <div className="w-4 h-4 bg-gray-100 rounded flex items-center justify-center">
+                        <span className="text-gray-600">💰</span>
+                      </div>
+                      <span className="text-gray-700">Sales</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-xs">
+                      <div className="w-4 h-4 bg-gray-100 rounded flex items-center justify-center">
+                        <span className="text-gray-600">👥</span>
+                      </div>
+                      <span className="text-gray-700">Customers</span>
+                    </div>
+                  </div>
+                  
+                  {/* Mobile Bottom Nav */}
+                  <div className="bg-gray-50 p-2 flex justify-around border-t">
+                    <div className="text-blue-600 text-xs">🏠</div>
+                    <div className="text-gray-400 text-xs">🔒</div>
+                    <div className="text-gray-400 text-xs">📋</div>
+                    <div className="text-gray-400 text-xs">⚙️</div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Floating Stats */}
+              <div className="absolute -top-4 -left-4 bg-white rounded-lg shadow-lg p-4 border border-gray-200 animate-bounce" style={{ animationDelay: "2s" }}>
+                <div className="text-sm text-gray-600">Monthly Revenue</div>
+                <div className="text-2xl font-bold text-green-600">+24%</div>
+              </div>
+              
+              <div className="absolute top-1/2 -left-8 bg-white rounded-lg shadow-lg p-3 border border-gray-200 animate-pulse" style={{ animationDelay: "3s" }}>
+                <div className="text-xs text-gray-600">Real-time Sync</div>
+                <div className="flex items-center gap-1 text-green-600">
+                  <div className="w-2 h-2 bg-green-500 rounded-full animate-ping"></div>
+                  <span className="text-sm font-medium">Active</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Trust Indicators */}
+          <div className="mt-16 text-center animate-on-scroll" style={{ animationDelay: "0.8s" }}>
+            <p className="text-blue-200 mb-6">Trusted by 1000+ businesses across Africa</p>
+            <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
+              <div className="text-white text-sm">🏪 Retail Stores</div>
+              <div className="text-white text-sm">🏥 Healthcare</div>
+              <div className="text-white text-sm">🍽️ Restaurants</div>
+              <div className="text-white text-sm">🏗️ Construction</div>
+              <div className="text-white text-sm">💼 Professional Services</div>
             </div>
           </div>
         </div>
-        <Link
-          to="/contact"
-          className="fixed bottom-24 right-6 z-50 bg-green-600 hover:bg-green-700 text-white p-4 rounded-full shadow-lg transition-colors"
-          aria-label="Chat with a sales expert"
-        >
-          <MessageCircle className="w-5 h-5" />
-        </Link>
       </section>
 
       {/* Features Section */}
