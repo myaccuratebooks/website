@@ -91,8 +91,8 @@ export default {
 			},
 			fontFamily: {
 				// Update font family based on the design instructions
-				sans: ['Poppins', 'Inter', 'system-ui', 'sans-serif'],
-				heading: ['Poppins', 'Inter', 'system-ui', 'sans-serif'],
+				sans: ['Poppins', 'system-ui', 'sans-serif'],
+				heading: ['Poppins', 'system-ui', 'sans-serif'],
 				// Alternative option
 				alt: {
 					heading: ['Montserrat', 'system-ui', 'sans-serif'],
