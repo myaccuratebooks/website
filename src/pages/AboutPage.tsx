@@ -45,11 +45,15 @@ const AboutPage = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="pt-16 pb-16 md:pt-24 md:pb-20 bg-gradient-to-r from-accurate-purple-100 via-white to-accurate-blue-50">
+      <section className="pt-16 pb-16 md:pt-24 md:pb-20 bg-[#FF8C42]">
         <div className="container">
-          <div className="max-w-3xl mx-auto text-center animate-on-scroll">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Story</h1>
-            <p className="text-xl text-gray-700 mb-8">
+          <div className="max-w-3xl mx-auto text-center animate-on-scroll text-white">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              Our Story
+              <br />
+              <span className="text-[#1E3A8A]">Building the future.</span>
+            </h1>
+            <p className="text-xl text-white/90 mb-8">
               MyAccurate Books is revolutionizing financial management for African SMEs with our innovative cloud-based accounting solution. We're making professional accounting accessible, affordable, and easy to use for businesses across the continent.
             </p>
           </div>

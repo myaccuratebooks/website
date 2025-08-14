@@ -105,6 +105,7 @@ const FeaturesPage: React.FC = () => {
                   
                   {/* POS Interface Mockup */}
                   <div className="absolute -right-8 -bottom-8 w-80 h-64 bg-white rounded-2xl shadow-2xl border border-gray-200 transform rotate-3">
+                    <div className="absolute inset-0 bg-white/80 rounded-2xl"></div>
                     <div className="p-6">
                       <div className="flex items-center justify-between mb-4">
                         <h3 className="font-semibold text-gray-800">New Sale</h3>
@@ -206,6 +207,7 @@ const FeaturesPage: React.FC = () => {
                   
                   {/* Inventory Mockup */}
                   <div className="absolute -right-4 -bottom-4 w-48 h-32 bg-white rounded-xl shadow-lg border border-gray-200">
+                    <div className="absolute inset-0 bg-white/80 rounded-xl"></div>
                     <div className="p-4">
                       <div className="flex items-center justify-between mb-2">
                         <span className="text-sm font-semibold">Stock Levels</span>
@@ -248,6 +250,7 @@ const FeaturesPage: React.FC = () => {
                   
                   {/* Payment Methods Mockup */}
                   <div className="absolute -right-4 -bottom-4 w-48 h-32 bg-white rounded-xl shadow-lg border border-gray-200">
+                    <div className="absolute inset-0 bg-white/80 rounded-xl"></div>
                     <div className="p-4">
                       <div className="text-sm font-semibold text-gray-800 mb-3">Payment Methods</div>
                       <div className="flex items-center gap-2 mb-2">
@@ -332,6 +335,7 @@ const FeaturesPage: React.FC = () => {
                   
                   {/* Reports Dashboard Mockup */}
                   <div className="absolute -right-8 -bottom-8 w-80 h-64 bg-white rounded-2xl shadow-2xl border border-gray-200 transform rotate-2">
+                    <div className="absolute inset-0 bg-white/80 rounded-2xl"></div>
                     <div className="p-6">
                       <div className="flex items-center justify-between mb-4">
                         <h3 className="font-semibold text-gray-800">P&L Report</h3>
@@ -384,6 +388,7 @@ const FeaturesPage: React.FC = () => {
                   
                   {/* Mobile App Mockup */}
                   <div className="absolute -right-4 -bottom-4 w-32 h-56 bg-gray-900 rounded-2xl shadow-2xl overflow-hidden transform rotate-6">
+                    <div className="absolute inset-0 bg-gray-900/80 rounded-2xl"></div>
                     <div className="bg-white h-full m-1 rounded-xl">
                       <div className="p-3">
                         <div className="bg-[#FF8C42] text-white text-center py-2 rounded-lg mb-3">
@@ -435,6 +440,7 @@ const FeaturesPage: React.FC = () => {
                   
                   {/* Expense Mockup */}
                   <div className="absolute -right-4 -bottom-4 w-48 h-32 bg-white rounded-xl shadow-lg border border-gray-200">
+                    <div className="absolute inset-0 bg-white/80 rounded-xl"></div>
                     <div className="p-4">
                       <div className="flex items-center justify-between mb-2">
                         <span className="text-sm font-semibold">Recent Expenses</span>
@@ -481,6 +487,7 @@ const FeaturesPage: React.FC = () => {
                   
                   {/* User Management Mockup */}
                   <div className="absolute -right-4 -bottom-4 w-48 h-32 bg-white rounded-xl shadow-lg border border-gray-200">
+                    <div className="absolute inset-0 bg-white/80 rounded-xl"></div>
                     <div className="p-4">
                       <div className="text-sm font-semibold text-gray-800 mb-3">Team Members</div>
                       <div className="space-y-2">
@@ -541,6 +548,8 @@ const FeaturesPage: React.FC = () => {
                   
                   {/* Dashboard Content */}
                   <div className="p-8 bg-gradient-to-br from-gray-50 to-white">
+                    <div className="absolute inset-0 bg-white/90 rounded-2xl"></div>
+                    <div className="relative z-10">
                     {/* Header */}
                     <div className="flex items-center justify-between mb-8">
                       <div className="flex items-center gap-4">
@@ -640,6 +649,7 @@ const FeaturesPage: React.FC = () => {
                           </div>
                         </div>
                       </div>
+                    </div>
                     </div>
                   </div>
                 </div>
