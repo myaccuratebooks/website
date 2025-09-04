@@ -169,9 +169,9 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-sm uppercase text-gray-500 mb-4">Product</h4>
             <ul className="space-y-3">
-              <li><Link to="/features" className="text-gray-600 hover:text-accurate-purple-500 transition-colors">Features</Link></li>
-              <li><Link to="/pricing" className="text-gray-600 hover:text-accurate-purple-500 transition-colors">Pricing</Link></li>
-              <li><Link to="/demo" className="text-gray-600 hover:text-accurate-purple-500 transition-colors">Demo & Resources</Link></li>
+              <li><Link to="/features" className="text-gray-600 hover:text-accurate-purple-500 transition-colors" onClick={() => window.scrollTo(0, 0)}>Features</Link></li>
+              <li><Link to="/pricing" className="text-gray-600 hover:text-accurate-purple-500 transition-colors" onClick={() => window.scrollTo(0, 0)}>Pricing</Link></li>
+              <li><Link to="/demo" className="text-gray-600 hover:text-accurate-purple-500 transition-colors" onClick={() => window.scrollTo(0, 0)}>Demo & Resources</Link></li>
               <li><a href="#" className="text-gray-600 hover:text-accurate-purple-500 transition-colors">Updates</a></li>
             </ul>
           </div>
@@ -180,10 +180,10 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-sm uppercase text-gray-500 mb-4">Resources</h4>
             <ul className="space-y-3">
-              <li><Link to="/blog" className="text-gray-600 hover:text-accurate-purple-500 transition-colors">Blog</Link></li>
-              <li><Link to="/webinars" className="text-gray-600 hover:text-accurate-purple-500 transition-colors">Webinars</Link></li>
-              <li><Link to="/help-center" className="text-gray-600 hover:text-accurate-purple-500 transition-colors">Help Center</Link></li>
-              <li><Link to="/updates" className="text-gray-600 hover:text-accurate-purple-500 transition-colors">Updates</Link></li>
+              <li><Link to="/blog" className="text-gray-600 hover:text-accurate-purple-500 transition-colors" onClick={() => window.scrollTo(0, 0)}>Blog</Link></li>
+              <li><Link to="/webinars" className="text-gray-600 hover:text-accurate-purple-500 transition-colors" onClick={() => window.scrollTo(0, 0)}>Webinars</Link></li>
+              <li><Link to="/help-center" className="text-gray-600 hover:text-accurate-purple-500 transition-colors" onClick={() => window.scrollTo(0, 0)}>Help Center</Link></li>
+              <li><Link to="/updates" className="text-gray-600 hover:text-accurate-purple-500 transition-colors" onClick={() => window.scrollTo(0, 0)}>Updates</Link></li>
             </ul>
           </div>
 
@@ -191,10 +191,10 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold text-sm uppercase text-gray-500 mb-4">Company</h4>
             <ul className="space-y-3">
-              <li><Link to="/about" className="text-gray-600 hover:text-accurate-purple-500 transition-colors">About Us</Link></li>
-              <li><Link to="/contact" className="text-gray-600 hover:text-accurate-purple-500 transition-colors">Contact</Link></li>
-              <li><Link to="/partners" className="text-gray-600 hover:text-accurate-purple-500 transition-colors">Partners</Link></li>
-              <li><Link to="/testimonials" className="text-gray-600 hover:text-accurate-purple-500 transition-colors">Testimonials</Link></li>
+              <li><Link to="/about" className="text-gray-600 hover:text-accurate-purple-500 transition-colors" onClick={() => window.scrollTo(0, 0)}>About Us</Link></li>
+              <li><Link to="/contact" className="text-gray-600 hover:text-accurate-purple-500 transition-colors" onClick={() => window.scrollTo(0, 0)}>Contact</Link></li>
+              <li><Link to="/partners" className="text-gray-600 hover:text-accurate-purple-500 transition-colors" onClick={() => window.scrollTo(0, 0)}>Partners</Link></li>
+              <li><Link to="/testimonials" className="text-gray-600 hover:text-accurate-purple-500 transition-colors" onClick={() => window.scrollTo(0, 0)}>Testimonials</Link></li>
             </ul>
           </div>
 
@@ -203,14 +203,14 @@ const Footer = () => {
             <h3 className="text-sm font-semibold text-gray-900 tracking-wider uppercase">Legal</h3>
             <ul className="space-y-4">
               <li>
-                <a href="/terms" className="text-base text-gray-500 hover:text-gray-900">
+                <Link to="/terms" className="text-base text-gray-500 hover:text-gray-900" onClick={() => window.scrollTo(0, 0)}>
                   Terms of Service
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/privacy-policy" className="text-base text-gray-500 hover:text-gray-900">
+                <Link to="/privacy-policy" className="text-base text-gray-500 hover:text-gray-900" onClick={() => window.scrollTo(0, 0)}>
                   Privacy Policy
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -223,8 +223,8 @@ const Footer = () => {
               &copy; {new Date().getFullYear()} MyAccurate Books. All rights reserved.
             </p>
             <div className="flex flex-wrap gap-4 text-sm">
-              <a href="#" className="text-gray-500 hover:text-accurate-purple-500 transition-colors">Terms of Service</a>
-              <a href="#" className="text-gray-500 hover:text-accurate-purple-500 transition-colors">Privacy Policy</a>
+              <Link to="/terms" className="text-gray-500 hover:text-accurate-purple-500 transition-colors" onClick={() => window.scrollTo(0, 0)}>Terms of Service</Link>
+              <Link to="/privacy-policy" className="text-gray-500 hover:text-accurate-purple-500 transition-colors" onClick={() => window.scrollTo(0, 0)}>Privacy Policy</Link>
               <a href="#" className="text-gray-500 hover:text-accurate-purple-500 transition-colors">Cookie Policy</a>
             </div>
           </div>

@@ -176,10 +176,10 @@ const PricingPage: React.FC = () => {
       />
       <div>
         {/* Hero Section */}
-        <section className="pt-20 pb-16 md:pt-28 md:pb-20 bg-gradient-to-br from-blue-100 via-white to-blue-50">
+        <section className="pt-20 pb-16 md:pt-28 md:pb-20 bg-gradient-to-br from-accurate-purple-100 via-white to-accurate-blue-50">
           <div className="container">
             <div className="max-w-3xl mx-auto text-center animate-fade-in">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 brand-gradient-text">Simple, Transparent Pricing</h1>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-accurate-purple-600 to-accurate-blue-600 bg-clip-text text-transparent">Simple, Transparent Pricing</h1>
               <p className="text-xl text-gray-700 mb-8">
                 Choose the plan that works best for your business. No hidden fees or surprises.
               </p>
@@ -197,7 +197,7 @@ const PricingPage: React.FC = () => {
                   onClick={() => setBillingPeriod(period as any)}
                   className={`px-6 py-3 rounded-full transition-all ${
                     billingPeriod === period
-                      ? "bg-blue-600 text-white shadow-lg scale-105"
+                      ? "bg-accurate-purple-600 text-white shadow-lg scale-105"
                       : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                   }`}
                 >
@@ -217,24 +217,24 @@ const PricingPage: React.FC = () => {
                   key={plan.name}
                   className={`relative rounded-xl border ${
                     plan.mostPopular
-                      ? "border-blue-500 shadow-xl ring-2 ring-blue-300 bg-gradient-to-b from-white to-blue-50 animate-pulse-slow transform hover:scale-105 transition-all duration-500"
-                      : "border-gray-200 hover:border-blue-300 hover:shadow-lg"
+                      ? "border-accurate-purple-500 shadow-xl ring-2 ring-accurate-purple-300 bg-gradient-to-b from-white to-accurate-purple-50 animate-pulse-slow transform hover:scale-105 transition-all duration-500"
+                      : "border-gray-200 hover:border-accurate-purple-300 hover:shadow-lg"
                   } bg-white p-6 animate-on-scroll transition-all duration-300`}
                 >
                   {plan.mostPopular && (
-                    <div className="absolute -top-4 left-0 right-0 mx-auto w-32 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 py-1 text-center text-sm font-semibold text-white shadow-md animate-bounce-subtle">
+                    <div className="absolute -top-4 left-0 right-0 mx-auto w-32 rounded-full bg-gradient-to-r from-accurate-purple-500 to-accurate-purple-600 py-1 text-center text-sm font-semibold text-white shadow-md animate-bounce-subtle">
                       Most Popular
                     </div>
                   )}
                   <div className="mb-6">
-                    <h3 className={`text-xl font-bold ${plan.mostPopular ? "text-blue-700" : ""}`}>{plan.name}</h3>
+                    <h3 className={`text-xl font-bold ${plan.mostPopular ? "text-accurate-purple-700" : ""}`}>{plan.name}</h3>
                     <p className="text-gray-600 mt-1 h-12">{plan.description}</p>
                   </div>
                   <div className="mb-6">
                     {plan.customPrice ? (
-                      <p className="text-3xl font-bold text-blue-700">{plan.customPrice}</p>
+                      <p className="text-3xl font-bold text-accurate-purple-700">{plan.customPrice}</p>
                     ) : (
-                      <p className={`text-3xl font-bold ${plan.mostPopular ? "text-blue-700" : "text-blue-700"}`}>
+                      <p className={`text-3xl font-bold ${plan.mostPopular ? "text-accurate-purple-700" : "text-accurate-purple-700"}`}>
                         KES {getPrice(plan)?.toLocaleString()}
                         {plan.monthlyPrice === 0 && <span className="text-lg text-gray-500 font-normal"> Free</span>}
                       </p>
@@ -248,15 +248,15 @@ const PricingPage: React.FC = () => {
                   <ul className="mb-6 space-y-3">
                     {plan.features.map(feature => (
                       <li key={feature} className="flex items-start">
-                        <Check className={`h-5 w-5 mr-2 ${plan.mostPopular ? "text-blue-600" : "text-blue-600"} flex-shrink-0`} />
+                        <Check className={`h-5 w-5 mr-2 ${plan.mostPopular ? "text-accurate-purple-600" : "text-accurate-purple-600"} flex-shrink-0`} />
                         <span>{feature}</span>
                       </li>
                     ))}
                   </ul>
                   <Button
                     className={`w-full ${plan.mostPopular
-                      ? "bg-gradient-to-r from-blue-600 to-blue-800 shadow-lg hover:shadow-xl scale-[1.02]"
-                      : plan.name === "Free" ? "bg-gradient-to-r from-sunset-400 to-sunset-500" : ""}`}
+                      ? "bg-gradient-to-r from-accurate-purple-600 to-accurate-purple-800 shadow-lg hover:shadow-xl scale-[1.02]"
+                      : plan.name === "Free" ? "bg-gradient-to-r from-accurate-purple-400 to-accurate-purple-500" : ""}`}
                     variant={plan.mostPopular || plan.name === "Free" ? "default" : "outline"}
                     asChild
                   >
@@ -269,7 +269,7 @@ const PricingPage: React.FC = () => {
         </section>
 
         {/* Comparison Section */}
-        <section className="py-20 bg-gradient-to-br from-blue-50 to-white">
+        <section className="py-20 bg-gradient-to-br from-accurate-purple-50 to-white">
           <div className="container">
             <SectionHeading title="Plan Comparison" subtitle="Compare our plans to find the right fit for your business needs." />
             <div className="overflow-x-auto mt-12 shadow-md rounded w-full">
@@ -278,8 +278,8 @@ const PricingPage: React.FC = () => {
                   <tr>
                     <th className="p-4 text-left font-bold rounded-tl-xl">Features</th>
                     <th className="p-4 text-center font-bold">Basic</th>
-                    <th className="p-4 text-center font-bold bg-blue-100">Standard</th>
-                    <th className="p-4 text-center font-bold bg-sunset-100">Gold</th>
+                    <th className="p-4 text-center font-bold bg-accurate-purple-100">Standard</th>
+                    <th className="p-4 text-center font-bold bg-accurate-blue-100">Gold</th>
                     <th className="p-4 text-center font-bold rounded-tr-xl">Enterprise</th>
                   </tr>
                 </thead>
@@ -287,57 +287,57 @@ const PricingPage: React.FC = () => {
                   <tr>
                     <td className="p-4 font-medium">User accounts</td>
                     <td className="p-4 text-center">1</td>
-                    <td className="p-4 text-center bg-blue-50">5</td>
-                    <td className="p-4 text-center bg-sunset-50">20</td>
+                    <td className="p-4 text-center bg-accurate-purple-50">5</td>
+                    <td className="p-4 text-center bg-accurate-blue-50">20</td>
                     <td className="p-4 text-center">Unlimited</td>
                   </tr>
                   <tr>
                     <td className="p-4 font-medium">Invoices</td>
                     <td className="p-4 text-center">10/month</td>
-                    <td className="p-4 text-center bg-blue-50">Unlimited</td>
-                    <td className="p-4 text-center bg-sunset-50">Unlimited</td>
+                    <td className="p-4 text-center bg-accurate-purple-50">Unlimited</td>
+                    <td className="p-4 text-center bg-accurate-blue-50">Unlimited</td>
                     <td className="p-4 text-center">Unlimited</td>
                   </tr>
                   <tr>
                     <td className="p-4 font-medium">Payment methods</td>
                     <td className="p-4 text-center">Mpesa, POS</td>
-                    <td className="p-4 text-center bg-blue-50">Mpesa, POS, Bank</td>
-                    <td className="p-4 text-center bg-sunset-50">Mpesa, POS, Bank</td>
+                    <td className="p-4 text-center bg-accurate-purple-50">Mpesa, POS, Bank</td>
+                    <td className="p-4 text-center bg-accurate-blue-50">Mpesa, POS, Bank</td>
                     <td className="p-4 text-center">All methods</td>
                   </tr>
                   <tr>
                     <td className="p-4 font-medium">Wallet module</td>
                     <td className="p-4 text-center"><Check className="h-5 w-5 mx-auto text-green-500" /></td>
-                    <td className="p-4 text-center bg-blue-50"><Check className="h-5 w-5 mx-auto text-green-500" /></td>
-                    <td className="p-4 text-center bg-sunset-50"><Check className="h-5 w-5 mx-auto text-green-500" /></td>
+                    <td className="p-4 text-center bg-accurate-purple-50"><Check className="h-5 w-5 mx-auto text-green-500" /></td>
+                    <td className="p-4 text-center bg-accurate-blue-50"><Check className="h-5 w-5 mx-auto text-green-500" /></td>
                     <td className="p-4 text-center"><Check className="h-5 w-5 mx-auto text-green-500" /></td>
                   </tr>
                   <tr>
                     <td className="p-4 font-medium">Payroll module</td>
                     <td className="p-4 text-center"><X className="h-5 w-5 mx-auto text-red-500" /></td>
-                    <td className="p-4 text-center bg-blue-50"><X className="h-5 w-5 mx-auto text-red-500" /></td>
-                    <td className="p-4 text-center bg-sunset-50"><Check className="h-5 w-5 mx-auto text-green-500" /></td>
+                    <td className="p-4 text-center bg-accurate-purple-50"><X className="h-5 w-5 mx-auto text-red-500" /></td>
+                    <td className="p-4 text-center bg-accurate-blue-50"><Check className="h-5 w-5 mx-auto text-green-500" /></td>
                     <td className="p-4 text-center"><Check className="h-5 w-5 mx-auto text-green-500" /></td>
                   </tr>
                   <tr>
                     <td className="p-4 font-medium">Business management module</td>
                     <td className="p-4 text-center"><X className="h-5 w-5 mx-auto text-red-500" /></td>
-                    <td className="p-4 text-center bg-blue-50"><X className="h-5 w-5 mx-auto text-red-500" /></td>
-                    <td className="p-4 text-center bg-sunset-50"><Check className="h-5 w-5 mx-auto text-green-500" /></td>
+                    <td className="p-4 text-center bg-accurate-purple-50"><X className="h-5 w-5 mx-auto text-red-500" /></td>
+                    <td className="p-4 text-center bg-accurate-blue-50"><Check className="h-5 w-5 mx-auto text-green-500" /></td>
                     <td className="p-4 text-center"><Check className="h-5 w-5 mx-auto text-green-500" /></td>
                   </tr>
                   <tr>
                     <td className="p-4 font-medium">Multi-location support</td>
                     <td className="p-4 text-center"><X className="h-5 w-5 mx-auto text-red-500" /></td>
-                    <td className="p-4 text-center bg-blue-50"><X className="h-5 w-5 mx-auto text-red-500" /></td>
-                    <td className="p-4 text-center bg-sunset-50"><Check className="h-5 w-5 mx-auto text-green-500" /></td>
+                    <td className="p-4 text-center bg-accurate-purple-50"><X className="h-5 w-5 mx-auto text-red-500" /></td>
+                    <td className="p-4 text-center bg-accurate-blue-50"><Check className="h-5 w-5 mx-auto text-green-500" /></td>
                     <td className="p-4 text-center"><Check className="h-5 w-5 mx-auto text-green-500" /></td>
                   </tr>
                   <tr>
                     <td className="p-4 font-medium">Support</td>
                     <td className="p-4 text-center">Community</td>
-                    <td className="p-4 text-center bg-blue-50">Email</td>
-                    <td className="p-4 text-center bg-sunset-50">Chat</td>
+                    <td className="p-4 text-center bg-accurate-purple-50">Email</td>
+                    <td className="p-4 text-center bg-accurate-blue-50">Chat</td>
                     <td className="p-4 text-center">Dedicated</td>
                   </tr>
                   <tr>
@@ -345,10 +345,10 @@ const PricingPage: React.FC = () => {
                     <td className="p-4 text-center">
                       <X className="h-5 w-5 mx-auto text-red-500" />
                     </td>
-                    <td className="p-4 text-center bg-blue-50">
+                    <td className="p-4 text-center bg-accurate-purple-50">
                       <X className="h-5 w-5 mx-auto text-red-500" />
                     </td>
-                    <td className="p-4 text-center bg-sunset-50">
+                    <td className="p-4 text-center bg-accurate-blue-50">
                       <X className="h-5 w-5 mx-auto text-red-500" />
                     </td>
                     <td className="p-4 text-center rounded-br-xl">
@@ -367,26 +367,26 @@ const PricingPage: React.FC = () => {
             <SectionHeading title="Frequently Asked Questions" subtitle="Get answers to common questions about our pricing and plans." />
             <div className="max-w-3xl mx-auto">
               <div className="space-y-6">
-                <div className="bg-white rounded-lg border border-blue-100 p-6 animate-on-scroll shadow-sm hover:shadow-md transition-all hover:border-blue-200">
-                  <h3 className="text-lg font-bold mb-2 text-blue-800">Can I change plans later?</h3>
+                <div className="bg-white rounded-lg border border-accurate-purple-100 p-6 animate-on-scroll shadow-sm hover:shadow-md transition-all hover:border-accurate-purple-200">
+                  <h3 className="text-lg font-bold mb-2 text-accurate-purple-800">Can I change plans later?</h3>
                   <p className="text-gray-600">
                     Yes, you can upgrade or downgrade your plan at any time. Changes to your subscription will be prorated based on the remaining days in your billing cycle.
                   </p>
                 </div>
-                <div className="bg-white rounded-lg border border-blue-100 p-6 animate-on-scroll shadow-sm hover:shadow-md transition-all hover:border-blue-200">
-                  <h3 className="text-lg font-bold mb-2 text-blue-800">Is there a free trial?</h3>
+                <div className="bg-white rounded-lg border border-accurate-purple-100 p-6 animate-on-scroll shadow-sm hover:shadow-md transition-all hover:border-accurate-purple-200">
+                  <h3 className="text-lg font-bold mb-2 text-accurate-purple-800">Is there a free trial?</h3>
                   <p className="text-gray-600">
                     Yes, we offer a 1-month free trial for our Standard plan. No credit card required to get started.
                   </p>
                 </div>
-                <div className="bg-white rounded-lg border border-sunset-100 p-6 animate-on-scroll shadow-sm hover:shadow-md transition-all hover:border-sunset-200">
-                  <h3 className="text-lg font-bold mb-2 text-blue-700">What payment methods do you accept?</h3>
+                <div className="bg-white rounded-lg border border-accurate-blue-100 p-6 animate-on-scroll shadow-sm hover:shadow-md transition-all hover:border-accurate-blue-200">
+                  <h3 className="text-lg font-bold mb-2 text-accurate-purple-700">What payment methods do you accept?</h3>
                   <p className="text-gray-600">
                     We accept major credit cards, bank transfers, and mobile money payments including M-Pesa.
                   </p>
                 </div>
-                <div className="bg-white rounded-lg border border-sunset-100 p-6 animate-on-scroll shadow-sm hover:shadow-md transition-all hover:border-sunset-200">
-                  <h3 className="text-lg font-bold mb-2 text-blue-700">Do you offer custom plans?</h3>
+                <div className="bg-white rounded-lg border border-accurate-blue-100 p-6 animate-on-scroll shadow-sm hover:shadow-md transition-all hover:border-accurate-blue-200">
+                  <h3 className="text-lg font-bold mb-2 text-accurate-purple-700">Do you offer custom plans?</h3>
                   <p className="text-gray-600">
                     Yes, our Enterprise plan offers customized solutions for large or complex businesses. Please contact our sales team for more information.
                   </p>
@@ -397,7 +397,7 @@ const PricingPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+        <section className="py-20 bg-gradient-to-r from-accurate-purple-600 to-accurate-blue-600 text-white">
           <div className="container">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Need Help Choosing the Right Plan?</h2>
@@ -405,7 +405,7 @@ const PricingPage: React.FC = () => {
                 Our team is ready to help you select the best option for your business needs.
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
-                <Button size="lg" className="bg-white text-blue-700 hover:bg-gray-100" asChild>
+                <Button size="lg" className="bg-white text-accurate-purple-700 hover:bg-gray-100" asChild>
                   <Link to="/contact">Contact Sales</Link>
                 </Button>
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10" asChild>
