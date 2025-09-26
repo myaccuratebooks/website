@@ -4,6 +4,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useEffect } from "react";
 import { HelmetProvider } from "react-helmet-async";
 import HomePage from "@/pages/HomePage";
 import FeaturesPage from "@/pages/FeaturesPage";
@@ -25,7 +26,13 @@ import UpdatesPage from "./pages/UpdatesPage";
 
 const queryClient = new QueryClient();
 
-const App: React.FC = () => (
+const App: React.FC = () => {
+  // Scroll to top on route change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  return (
   <HelmetProvider>
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
@@ -60,6 +67,7 @@ const App: React.FC = () => (
       </TooltipProvider>
     </QueryClientProvider>
   </HelmetProvider>
-);
+  );
+};
 
 export default App;

@@ -1,9 +1,7 @@
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { SectionHeading } from "@/components/SectionHeading";
-import { FeatureCard } from "@/components/FeatureCard";
 import { Link } from "react-router-dom";
-import Features2 from './features2'; // Using our new component
+import { ArrowRight, Play, BarChart3, Users, Package, CreditCard, FileText, Smartphone } from "lucide-react";
 import SEO from '@/components/SEO';
 
 const FeaturesPage: React.FC = () => {
@@ -14,20 +12,20 @@ const FeaturesPage: React.FC = () => {
       {
         "@type": "ListItem",
         "position": 1,
-        "name": "Automated Bookkeeping",
-        "description": "Streamline your financial records with our automated bookkeeping system"
+        "name": "Point of Sale (POS)",
+        "description": "Process sales quickly, print receipts, and track inventory movements in real-time"
       },
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "Real-time Reporting",
-        "description": "Access your financial reports in real-time"
+        "name": "Customer Management",
+        "description": "Build and maintain customer profiles with purchase history and communication logs"
       },
       {
         "@type": "ListItem",
         "position": 3,
-        "name": "Tax Compliance",
-        "description": "Stay compliant with automated tax calculations and reporting"
+        "name": "Item Management",
+        "description": "Track inventory levels, set reorder points, and manage product details"
       }
     ]
   };
@@ -42,452 +40,655 @@ const FeaturesPage: React.FC = () => {
         ogImage="https://myaccuratebooks.com/images/features-og.jpg"
         structuredData={structuredData}
       />
-    <div>
-      {/* Hero Section */}
-      <section className="pt-16 pb-16 md:pt-24 md:pb-20 bg-gradient-to-r from-accurate-purple-100 via-white to-accurate-blue-50">
-        <div className="container">
-          <div className="max-w-3xl mx-auto text-center animate-on-scroll">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Powerful Features for Your Business</h1>
-            <p className="text-xl text-gray-700 mb-8">
-              MyAccurate Books provides all the tools you need to manage your finances without any accounting knowledge.
-            </p>
-            <Button size="lg" asChild>
-              <Link to="/pricing">Get Started</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-
-      {/* Key Features Section*/}
-      <section className="py-20">
-        <div className="container">
-          <SectionHeading
-            title="Core Features"
-            subtitle="Discover how MyAccurate Books can help streamline your business operations."
-          />
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <FeatureCard
-              title="Point of Sale (POS)"
-              description="Process sales quickly, print receipts, and track inventory movements in real-time."
-              icon={
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
-                  <path d="M4 9a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9Z" />
-                  <path d="M10 13h4" />
-                  <path d="M7 16h.01" />
-                  <path d="M17 16h.01" />
-                  <path d="M5 5h14" />
-                </svg>
-              }
-            />
-            <FeatureCard
-              title="Customer Management"
-              description="Build and maintain customer profiles with purchase history, communication logs, and custom notes."
-              icon={
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
-                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                  <circle cx="9" cy="7" r="4" />
-                  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                </svg>
-              }
-            />
-            <FeatureCard
-              title="Item Management"
-              description="Track inventory levels, set reorder points, and manage product details effortlessly."
-              icon={
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
-                  <path d="M20 7h-8a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2Z" />
-                  <path d="M16 3h-8a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h8" />
-                  <path d="M12 12h.01" />
-                </svg>
-              }
-            />
-            <FeatureCard
-              title="Payments Integration"
-              description="Accept multiple payment methods including Mpesa, bank transfers, and cash with automatic reconciliation."
-              icon={
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
-                  <rect width="20" height="14" x="2" y="5" rx="2" />
-                  <line x1="2" x2="22" y1="10" y2="10" />
-                </svg>
-              }
-            />
-            <FeatureCard
-              title="Multi-User Access"
-              description="Grant different access levels to team members based on their roles and responsibilities."
-              icon={
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
-                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                  <circle cx="9" cy="7" r="4" />
-                  <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                </svg>
-              }
-            />
-            <FeatureCard
-              title="Financial Reports"
-              description="Generate income statements, balance sheets, and cash flow reports with a single click."
-              icon={
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-8 h-8">
-                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                  <polyline points="14 2 14 8 20 8"></polyline>
-                  <line x1="16" y1="13" x2="8" y2="13"></line>
-                  <line x1="16" y1="17" x2="8" y2="17"></line>
-                  <polyline points="10 9 9 9 8 9"></polyline>
-                </svg>
-              }
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Features Tabs Section */}
-      <section>
-        <Features2 />
-      </section>
-
-      {/* Detailed Features Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container">
-          <SectionHeading
-            title="Advanced Features"
-            subtitle="Take your business to the next level with these powerful tools"
-          />
-          <div className="grid md:grid-cols-2 gap-12 mb-20">
-            <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 animate-on-scroll">
-              <h3 className="text-2xl font-bold mb-4">Dynamic Dashboard</h3>
-              <p className="text-gray-700 mb-6">
-                Get a complete overview of your business performance with customizable widgets showing sales trends, cash flow, inventory levels, and more.
+      
+      <div className="min-h-screen bg-white font-['Poppins']">
+        {/* Hero Section */}
+        <section className="bg-[#FF8C42] py-20 lg:py-32">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto text-center">
+              <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                The features you need.
+                <br />
+                <span className="text-[#1E3A8A]">All in one place.</span>
+              </h1>
+              <p className="text-xl lg:text-2xl text-white/90 mb-8 max-w-4xl mx-auto leading-relaxed">
+                Powerful accounting software that helps you send invoices, track inventory, 
+                manage cashflow, and streamline your business operations across Africa.
               </p>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2 text-accurate-purple-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Real-time data visualization</span>
-                </li>
-                <li className="flex items-start">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2 text-accurate-purple-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Customizable widget layout</span>
-                </li>
-                <li className="flex items-start">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2 text-accurate-purple-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Key performance indicators at a glance</span>
-                </li>
-              </ul>
-            </div>
-            <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 animate-on-scroll">
-              <h3 className="text-2xl font-bold mb-4">Invoice Management</h3>
-              <p className="text-gray-700 mb-6">
-                Create and send professional invoices to your customers, track payments, and automate reminders for overdue invoices.
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2 text-accurate-purple-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Professional invoice templates</span>
-                </li>
-                <li className="flex items-start">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2 text-accurate-purple-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Automatic payment tracking</span>
-                </li>
-                <li className="flex items-start">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2 text-accurate-purple-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Customizable reminder schedules</span>
-                </li>
-              </ul>
-            </div>
-            <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 animate-on-scroll">
-              <h3 className="text-2xl font-bold mb-4">Expense Tracking</h3>
-              <p className="text-gray-700 mb-6">
-                Keep track of all your business expenses, categorize them, and attach receipts for easy tax preparation.
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2 text-accurate-purple-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Receipt scanning and storage</span>
-                </li>
-                <li className="flex items-start">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2 text-accurate-purple-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Expense categorization</span>
-                </li>
-                <li className="flex items-start">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2 text-accurate-purple-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Tax-ready expense reports</span>
-                </li>
-              </ul>
-            </div>
-            <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 animate-on-scroll">
-              <h3 className="text-2xl font-bold mb-4">Inventory Control</h3>
-              <p className="text-gray-700 mb-6">
-                Advanced inventory management with batch tracking, expiry date management, and automatic reordering.
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2 text-accurate-purple-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Low stock alerts</span>
-                </li>
-                <li className="flex items-start">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2 text-accurate-purple-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Batch and expiry tracking</span>
-                </li>
-                <li className="flex items-start">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2 text-accurate-purple-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Barcode scanning integration</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Feature Spotlight */}
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="animate-on-scroll">
-              <h2 className="text-3xl font-bold mb-6">Point of Sale System</h2>
-              <p className="text-lg text-gray-700 mb-6">
-                Our intuitive point of sale system helps you process transactions quickly and efficiently. Record sales, generate receipts, and track inventory all in one place.
-              </p>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2 text-accurate-purple-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>User-friendly interface for quick transaction processing</span>
-                </li>
-                <li className="flex items-start">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2 text-accurate-purple-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Automatic inventory adjustment with each sale</span>
-                </li>
-                <li className="flex items-start">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2 text-accurate-purple-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Multiple payment method support including M-Pesa integration</span>
-                </li>
-                <li className="flex items-start">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2 text-accurate-purple-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Receipt printing and electronic receipt options</span>
-                </li>
-                <li className="flex items-start">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2 text-accurate-purple-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Customer profile integration for personalized service</span>
-                </li>
-              </ul>
-            </div>
-            <div className="relative animate-on-scroll">
-              <div className="absolute inset-0 bg-gradient-to-r from-accurate-purple-200 to-accurate-blue-200 rounded-lg transform rotate-2"></div>
-              <div className="bg-white rounded-lg shadow-xl overflow-hidden border border-gray-100 relative">
-                <img
-                  src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                  alt="Point of Sale System"
-                  className="w-full h-auto"
-                />
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button 
+                  size="lg" 
+                  className="bg-white text-[#FF8C42] hover:bg-gray-100 font-semibold px-8 py-4 text-lg rounded-lg shadow-lg"
+                  asChild
+                >
+                  <Link to="/pricing">Start my free trial</Link>
+                </Button>
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-2 border-white text-white hover:bg-white hover:text-[#FF8C42] font-semibold px-8 py-4 text-lg rounded-lg"
+                  asChild
+                >
+                  <Link to="/demo">Request a demo</Link>
+                </Button>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Second Feature Spotlight */}
-      <section className="py-20">
-        <div className="container">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="order-2 md:order-1 relative animate-on-scroll">
-              <div className="absolute inset-0 bg-gradient-to-r from-accurate-blue-200 to-accurate-purple-200 rounded-lg transform -rotate-2"></div>
-              <div className="bg-white rounded-lg shadow-xl overflow-hidden border border-gray-100 relative">
-                <img
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
-                  alt="Customer Management"
-                  className="w-full h-auto"
-                />
+        {/* Features Grid Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-7xl mx-auto">
+              <div className="grid lg:grid-cols-2 gap-8 mb-16">
+                {/* Point of Sale Feature */}
+                <div className="bg-[#E8F4FD] rounded-3xl p-8 lg:p-12 relative overflow-hidden">
+                  <div className="relative z-10">
+                    <h2 className="text-3xl lg:text-4xl font-bold text-[#1E3A8A] mb-6">
+                      Point of Sale (POS)
+                    </h2>
+                    <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+                      Process sales quickly, print receipts, and track inventory movements in real-time. 
+                      Accept multiple payment methods including M-Pesa, cash, and card payments with 
+                      seamless integration to your accounting records.
+                    </p>
+                    <Button 
+                      variant="link" 
+                      className="text-[#1E3A8A] font-semibold text-lg p-0 h-auto hover:text-[#FF8C42]"
+                      asChild
+                    >
+                      <Link to="/demo" className="inline-flex items-center">
+                        Learn about POS <ArrowRight className="ml-2 h-5 w-5" />
+                      </Link>
+                    </Button>
+                  </div>
+                  
+                  {/* POS Interface Mockup */}
+                  <div className="absolute -right-8 -bottom-8 w-80 h-64 bg-white rounded-2xl shadow-2xl border border-gray-200 transform rotate-3">
+                    <div className="absolute inset-0 bg-white/80 rounded-2xl"></div>
+                    <div className="p-6">
+                      <div className="flex items-center justify-between mb-4">
+                        <h3 className="font-semibold text-gray-800">New Sale</h3>
+                        <div className="text-sm text-gray-500">POS Terminal</div>
+                      </div>
+                      <div className="space-y-3">
+                        <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                          <span className="text-sm">Product A</span>
+                          <span className="font-semibold">KES 500</span>
+                        </div>
+                        <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                          <span className="text-sm">Product B</span>
+                          <span className="font-semibold">KES 750</span>
+                        </div>
+                        <div className="border-t pt-3 flex justify-between items-center">
+                          <span className="font-bold">Total</span>
+                          <span className="font-bold text-lg">KES 1,250</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Customer Management Feature */}
+                <div className="bg-[#1E3A8A] rounded-3xl p-8 lg:p-12 text-white relative overflow-hidden">
+                  <div className="relative z-10">
+                    <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+                      Customer Management
+                    </h2>
+                    <p className="text-lg text-white/90 mb-8 leading-relaxed">
+                      Build and maintain customer profiles with detailed purchase history, 
+                      communication logs, and preferences. Track customer interactions and 
+                      improve relationships with comprehensive customer insights.
+                    </p>
+                    <Button 
+                      variant="link" 
+                      className="text-white font-semibold text-lg p-0 h-auto hover:text-[#FF8C42]"
+                      asChild
+                    >
+                      <Link to="/demo" className="inline-flex items-center">
+                        Learn about Customer Management <ArrowRight className="ml-2 h-5 w-5" />
+                      </Link>
+                    </Button>
+                  </div>
+                  
+                  {/* Customer Interface Mockup */}
+                  <div className="absolute -right-8 -bottom-8 w-80 h-64 bg-white rounded-2xl shadow-2xl border border-gray-200 transform -rotate-3">
+                    <div className="p-6">
+                      <div className="flex items-center mb-4">
+                        <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                          <Users className="h-6 w-6 text-blue-600" />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-gray-800">Sarah Kimani</h3>
+                          <p className="text-sm text-gray-500">Premium Customer</p>
+                        </div>
+                      </div>
+                      <div className="space-y-2">
+                        <div className="flex justify-between text-sm">
+                          <span className="text-gray-600">Total Purchases</span>
+                          <span className="font-semibold">KES 45,000</span>
+                        </div>
+                        <div className="flex justify-between text-sm">
+                          <span className="text-gray-600">Last Purchase</span>
+                          <span className="font-semibold">2 days ago</span>
+                        </div>
+                        <div className="flex justify-between text-sm">
+                          <span className="text-gray-600">Status</span>
+                          <span className="text-green-600 font-semibold">Active</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className="order-1 md:order-2 animate-on-scroll">
-              <h2 className="text-3xl font-bold mb-6">Customer Management</h2>
-              <p className="text-lg text-gray-700 mb-6">
-                Build stronger customer relationships by keeping track of all customer interactions and purchase history in one centralized system.
-              </p>
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2 text-accurate-purple-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Complete customer profiles with contact information and preferences</span>
-                </li>
-                <li className="flex items-start">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2 text-accurate-purple-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Detailed purchase history and payment tracking</span>
-                </li>
-                <li className="flex items-start">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2 text-accurate-purple-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Customer segmentation for targeted marketing campaigns</span>
-                </li>
-                <li className="flex items-start">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2 text-accurate-purple-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Custom fields for industry-specific customer information</span>
-                </li>
-                <li className="flex items-start">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2 text-accurate-purple-600 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Loyalty program integration for repeat business</span>
-                </li>
-              </ul>
+
+              {/* Second Row */}
+              <div className="grid lg:grid-cols-3 gap-8 mb-16">
+                {/* Item Management */}
+                <div className="bg-[#F0F9FF] rounded-3xl p-8 relative overflow-hidden">
+                  <div className="relative z-10">
+                    <h2 className="text-2xl lg:text-3xl font-bold text-[#1E3A8A] mb-4">
+                      Item Management
+                    </h2>
+                    <p className="text-gray-700 mb-6 leading-relaxed">
+                      Track inventory levels, set reorder points, and manage product details 
+                      with barcode scanning and automated stock alerts.
+                    </p>
+                    <Button 
+                      variant="link" 
+                      className="text-[#1E3A8A] font-semibold p-0 h-auto hover:text-[#FF8C42]"
+                      asChild
+                    >
+                      <Link to="/demo" className="inline-flex items-center">
+                        Learn about Inventory <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                  </div>
+                  
+                  {/* Inventory Mockup */}
+                  <div className="absolute -right-4 -bottom-4 w-48 h-32 bg-white rounded-xl shadow-lg border border-gray-200">
+                    <div className="absolute inset-0 bg-white/80 rounded-xl"></div>
+                    <div className="p-4">
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-sm font-semibold">Stock Levels</span>
+                        <Package className="h-4 w-4 text-blue-600" />
+                      </div>
+                      <div className="space-y-1">
+                        <div className="flex justify-between text-xs">
+                          <span>Product A</span>
+                          <span className="text-green-600">150 units</span>
+                        </div>
+                        <div className="flex justify-between text-xs">
+                          <span>Product B</span>
+                          <span className="text-red-600">5 units</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Payments Integration */}
+                <div className="bg-[#1E3A8A] rounded-3xl p-8 text-white relative overflow-hidden">
+                  <div className="relative z-10">
+                    <h2 className="text-2xl lg:text-3xl font-bold mb-4">
+                      Payments Integration
+                    </h2>
+                    <p className="text-white/90 mb-6 leading-relaxed">
+                      Accept M-Pesa, bank transfers, and cash payments with automatic 
+                      reconciliation and real-time payment tracking.
+                    </p>
+                    <Button 
+                      variant="link" 
+                      className="text-white font-semibold p-0 h-auto hover:text-[#FF8C42]"
+                      asChild
+                    >
+                      <Link to="/demo" className="inline-flex items-center">
+                        Learn about Payments <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                  </div>
+                  
+                  {/* Payment Methods Mockup */}
+                  <div className="absolute -right-4 -bottom-4 w-48 h-32 bg-white rounded-xl shadow-lg border border-gray-200">
+                    <div className="absolute inset-0 bg-white/80 rounded-xl"></div>
+                    <div className="p-4">
+                      <div className="text-sm font-semibold text-gray-800 mb-3">Payment Methods</div>
+                      <div className="flex items-center gap-2 mb-2">
+                        <div className="w-8 h-5 bg-green-500 rounded text-white text-xs flex items-center justify-center">M</div>
+                        <span className="text-xs text-gray-700">M-Pesa</span>
+                      </div>
+                      <div className="flex items-center gap-2 mb-2">
+                        <CreditCard className="h-4 w-4 text-blue-600" />
+                        <span className="text-xs text-gray-700">Cards</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <div className="w-4 h-4 bg-gray-400 rounded"></div>
+                        <span className="text-xs text-gray-700">Bank Transfer</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* More Features */}
+                <div className="bg-[#FEF3C7] rounded-3xl p-8 relative overflow-hidden">
+                  <div className="relative z-10">
+                    <div className="w-12 h-12 bg-[#FF8C42] rounded-xl flex items-center justify-center mb-6">
+                      <span className="text-white font-bold text-xl">+</span>
+                    </div>
+                    <h2 className="text-2xl lg:text-3xl font-bold text-[#1E3A8A] mb-6">
+                      More features
+                    </h2>
+                    
+                    <div className="grid grid-cols-2 gap-4 text-sm">
+                      <Link to="/demo" className="flex items-center text-[#1E3A8A] hover:text-[#FF8C42] font-medium">
+                        Multi-User Access <ArrowRight className="ml-1 h-3 w-3" />
+                      </Link>
+                      <Link to="/demo" className="flex items-center text-[#1E3A8A] hover:text-[#FF8C42] font-medium">
+                        Financial Reports <ArrowRight className="ml-1 h-3 w-3" />
+                      </Link>
+                      <Link to="/demo" className="flex items-center text-[#1E3A8A] hover:text-[#FF8C42] font-medium">
+                        Expense Tracking <ArrowRight className="ml-1 h-3 w-3" />
+                      </Link>
+                      <Link to="/demo" className="flex items-center text-[#1E3A8A] hover:text-[#FF8C42] font-medium">
+                        Invoice Management <ArrowRight className="ml-1 h-3 w-3" />
+                      </Link>
+                      <Link to="/demo" className="flex items-center text-[#1E3A8A] hover:text-[#FF8C42] font-medium">
+                        Mobile App <ArrowRight className="ml-1 h-3 w-3" />
+                      </Link>
+                      <Link to="/demo" className="flex items-center text-[#1E3A8A] hover:text-[#FF8C42] font-medium">
+                        Cloud Backup <ArrowRight className="ml-1 h-3 w-3" />
+                      </Link>
+                      <Link to="/demo" className="flex items-center text-[#1E3A8A] hover:text-[#FF8C42] font-medium">
+                        Tax Compliance <ArrowRight className="ml-1 h-3 w-3" />
+                      </Link>
+                      <Link to="/demo" className="flex items-center text-[#1E3A8A] hover:text-[#FF8C42] font-medium">
+                        Business Analytics <ArrowRight className="ml-1 h-3 w-3" />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Second Features Row */}
+              <div className="grid lg:grid-cols-2 gap-8">
+                {/* Financial Reports */}
+                <div className="bg-[#F0F9FF] rounded-3xl p-8 lg:p-12 relative overflow-hidden">
+                  <div className="relative z-10">
+                    <h2 className="text-3xl lg:text-4xl font-bold text-[#1E3A8A] mb-6">
+                      Financial Reports
+                    </h2>
+                    <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+                      Generate comprehensive financial statements, profit & loss reports, 
+                      and cash flow analysis with real-time data visualization and 
+                      customizable reporting templates.
+                    </p>
+                    <Button 
+                      variant="link" 
+                      className="text-[#1E3A8A] font-semibold text-lg p-0 h-auto hover:text-[#FF8C42]"
+                      asChild
+                    >
+                      <Link to="/demo" className="inline-flex items-center">
+                        Learn about Reports <ArrowRight className="ml-2 h-5 w-5" />
+                      </Link>
+                    </Button>
+                  </div>
+                  
+                  {/* Reports Dashboard Mockup */}
+                  <div className="absolute -right-8 -bottom-8 w-80 h-64 bg-white rounded-2xl shadow-2xl border border-gray-200 transform rotate-2">
+                    <div className="absolute inset-0 bg-white/80 rounded-2xl"></div>
+                    <div className="p-6">
+                      <div className="flex items-center justify-between mb-4">
+                        <h3 className="font-semibold text-gray-800">P&L Report</h3>
+                        <BarChart3 className="h-5 w-5 text-blue-600" />
+                      </div>
+                      <div className="space-y-2">
+                        <div className="flex justify-between text-sm">
+                          <span className="text-gray-600">Revenue</span>
+                          <span className="font-semibold text-green-600">KES 125,000</span>
+                        </div>
+                        <div className="flex justify-between text-sm">
+                          <span className="text-gray-600">Expenses</span>
+                          <span className="font-semibold text-red-600">KES 85,000</span>
+                        </div>
+                        <div className="border-t pt-2 flex justify-between">
+                          <span className="font-bold text-gray-800">Net Profit</span>
+                          <span className="font-bold text-green-600">KES 40,000</span>
+                        </div>
+                      </div>
+                      <div className="mt-4 h-16 bg-gradient-to-r from-blue-100 to-green-100 rounded-lg flex items-end justify-center">
+                        <div className="text-xs text-gray-500">📊 Chart View</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Mobile App */}
+                <div className="bg-[#FEF3C7] rounded-3xl p-8 lg:p-12 relative overflow-hidden">
+                  <div className="relative z-10">
+                    <div className="w-12 h-12 bg-[#FF8C42] rounded-xl flex items-center justify-center mb-6">
+                      <Smartphone className="h-6 w-6 text-white" />
+                    </div>
+                    <h2 className="text-3xl lg:text-4xl font-bold text-[#1E3A8A] mb-6">
+                      Mobile Access
+                    </h2>
+                    <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+                      Access your business data anytime, anywhere with our powerful mobile 
+                      application. Process sales, check inventory, and view reports on the go.
+                    </p>
+                    <Button 
+                      variant="link" 
+                      className="text-[#1E3A8A] font-semibold text-lg p-0 h-auto hover:text-[#FF8C42]"
+                      asChild
+                    >
+                      <Link to="/demo" className="inline-flex items-center">
+                        Download Mobile App <ArrowRight className="ml-2 h-5 w-5" />
+                      </Link>
+                    </Button>
+                  </div>
+                  
+                  {/* Mobile App Mockup */}
+                  <div className="absolute -right-4 -bottom-4 w-32 h-56 bg-gray-900 rounded-2xl shadow-2xl overflow-hidden transform rotate-6">
+                    <div className="absolute inset-0 bg-gray-900/80 rounded-2xl"></div>
+                    <div className="bg-white h-full m-1 rounded-xl">
+                      <div className="p-3">
+                        <div className="bg-[#FF8C42] text-white text-center py-2 rounded-lg mb-3">
+                          <div className="text-xs font-semibold">MyAccurate Books</div>
+                        </div>
+                        <div className="space-y-2">
+                          <div className="flex items-center gap-2 text-xs">
+                            <div className="w-3 h-3 bg-blue-100 rounded"></div>
+                            <span>Dashboard</span>
+                          </div>
+                          <div className="flex items-center gap-2 text-xs">
+                            <div className="w-3 h-3 bg-green-100 rounded"></div>
+                            <span>Sales</span>
+                          </div>
+                          <div className="flex items-center gap-2 text-xs">
+                            <div className="w-3 h-3 bg-orange-100 rounded"></div>
+                            <span>Inventory</span>
+                          </div>
+                          <div className="flex items-center gap-2 text-xs">
+                            <div className="w-3 h-3 bg-purple-100 rounded"></div>
+                            <span>Reports</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Expense Tracking */}
+                <div className="bg-[#F8FAFC] rounded-3xl p-8 relative overflow-hidden border border-gray-200">
+                  <div className="relative z-10">
+                    <h2 className="text-2xl lg:text-3xl font-bold text-[#1E3A8A] mb-4">
+                      Expense Tracking
+                    </h2>
+                    <p className="text-gray-700 mb-6 leading-relaxed">
+                      Keep track of all business expenses with receipt scanning, 
+                      automated categorization, and detailed expense reports for tax preparation.
+                    </p>
+                    <Button 
+                      variant="link" 
+                      className="text-[#1E3A8A] font-semibold p-0 h-auto hover:text-[#FF8C42]"
+                      asChild
+                    >
+                      <Link to="/demo" className="inline-flex items-center">
+                        Learn about Expenses <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                  </div>
+                  
+                  {/* Expense Mockup */}
+                  <div className="absolute -right-4 -bottom-4 w-48 h-32 bg-white rounded-xl shadow-lg border border-gray-200">
+                    <div className="absolute inset-0 bg-white/80 rounded-xl"></div>
+                    <div className="p-4">
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-sm font-semibold">Recent Expenses</span>
+                        <FileText className="h-4 w-4 text-orange-600" />
+                      </div>
+                      <div className="space-y-1">
+                        <div className="flex justify-between text-xs">
+                          <span>Office Supplies</span>
+                          <span>KES 3,000</span>
+                        </div>
+                        <div className="flex justify-between text-xs">
+                          <span>Fuel</span>
+                          <span>KES 5,500</span>
+                        </div>
+                        <div className="flex justify-between text-xs">
+                          <span>Marketing</span>
+                          <span>KES 12,000</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Multi-User Access */}
+                <div className="bg-[#1E3A8A] rounded-3xl p-8 text-white relative overflow-hidden">
+                  <div className="relative z-10">
+                    <h2 className="text-2xl lg:text-3xl font-bold mb-4">
+                      Multi-User Access
+                    </h2>
+                    <p className="text-white/90 mb-6 leading-relaxed">
+                      Grant different access levels to team members with role-based 
+                      permissions and secure user management controls.
+                    </p>
+                    <Button 
+                      variant="link" 
+                      className="text-white font-semibold p-0 h-auto hover:text-[#FF8C42]"
+                      asChild
+                    >
+                      <Link to="/demo" className="inline-flex items-center">
+                        Learn about Access Control <ArrowRight className="ml-2 h-4 w-4" />
+                      </Link>
+                    </Button>
+                  </div>
+                  
+                  {/* User Management Mockup */}
+                  <div className="absolute -right-4 -bottom-4 w-48 h-32 bg-white rounded-xl shadow-lg border border-gray-200">
+                    <div className="absolute inset-0 bg-white/80 rounded-xl"></div>
+                    <div className="p-4">
+                      <div className="text-sm font-semibold text-gray-800 mb-3">Team Members</div>
+                      <div className="space-y-2">
+                        <div className="flex items-center gap-2">
+                          <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
+                            <span className="text-xs font-semibold text-blue-600">A</span>
+                          </div>
+                          <div>
+                            <div className="text-xs font-medium">Admin</div>
+                            <div className="text-xs text-gray-500">Full Access</div>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center">
+                            <span className="text-xs font-semibold text-green-600">S</span>
+                          </div>
+                          <div>
+                            <div className="text-xs font-medium">Staff</div>
+                            <div className="text-xs text-gray-500">Sales Only</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Upcoming Features */}
-      <section className="py-20 bg-gray-50">
-        <div className="container">
-          <SectionHeading
-            title="Coming Soon"
-            subtitle="We're constantly improving MyAccurate Books. Here are some features we're working on."
-          />
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 animate-on-scroll">
-              <div className="w-12 h-12 bg-accurate-purple-100 rounded-md flex items-center justify-center mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-accurate-purple-600">
-                  <path d="M19 5c-1.5 0-2.8 1.4-3 2-3.5-1.5-11-.3-11 5 0 1.8 0 3 2 4.5V20h4v-2h3v2h4v-4c1-.5 1.7-1 2-2h2v-7h-2c0-1-.5-1.5-1-2z" />
-                  <path d="M2 9v1c0 1.1.9 2 2 2h1" />
-                  <path d="M16 11h0" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Petty Cash Management</h3>
-              <p className="text-gray-600 mb-4">
-                Track small expenses and maintain petty cash balances with detailed logs and reports.
+        {/* Dashboard Preview Section */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto text-center mb-16">
+              <h2 className="text-4xl lg:text-5xl font-bold text-[#1E3A8A] mb-6">
+                See MyAccurate Books in Action
+              </h2>
+              <p className="text-xl text-gray-600 mb-8">
+                Experience the power of our comprehensive dashboard
               </p>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li className="flex items-center">
-                  <span className="w-1.5 h-1.5 bg-accurate-purple-600 rounded-full mr-2"></span>
-                  <span>Cash withdrawal and deposit tracking</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="w-1.5 h-1.5 bg-accurate-purple-600 rounded-full mr-2"></span>
-                  <span>Expense categorization</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="w-1.5 h-1.5 bg-accurate-purple-600 rounded-full mr-2"></span>
-                  <span>Reconciliation tools</span>
-                </li>
-              </ul>
             </div>
-            <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 animate-on-scroll" style={{ animationDelay: "0.2s" }}>
-              <div className="w-12 h-12 bg-accurate-purple-100 rounded-md flex items-center justify-center mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-accurate-purple-600">
-                  <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
-                  <line x1="16" x2="16" y1="2" y2="6" />
-                  <line x1="8" x2="8" y1="2" y2="6" />
-                  <line x1="3" x2="21" y1="10" y2="10" />
-                  <path d="M8 14h.01" />
-                  <path d="M12 14h.01" />
-                  <path d="M16 14h.01" />
-                  <path d="M8 18h.01" />
-                  <path d="M12 18h.01" />
-                  <path d="M16 18h.01" />
-                </svg>
+            
+            {/* Dashboard Screenshot */}
+            <div className="relative max-w-6xl mx-auto">
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-3xl p-8 shadow-2xl">
+                <div className="bg-white rounded-2xl overflow-hidden shadow-xl border border-gray-200">
+                  {/* Browser Header */}
+                  <div className="bg-gray-100 px-6 py-4 flex items-center gap-3 border-b">
+                    <div className="flex gap-2">
+                      <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+                      <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                      <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                    </div>
+                    <div className="flex-1 bg-white rounded-md px-4 py-2 text-sm text-gray-600 ml-4">
+                      app.myaccuratebook.com
+                    </div>
+                  </div>
+                  
+                  {/* Dashboard Content */}
+                  <div className="p-8 bg-gradient-to-br from-gray-50 to-white">
+                    <div className="absolute inset-0 bg-white/90 rounded-2xl"></div>
+                    <div className="relative z-10">
+                    {/* Header */}
+                    <div className="flex items-center justify-between mb-8">
+                      <div className="flex items-center gap-4">
+                        <img src="/images/logo.png" alt="MyAccurate Books" className="h-10 w-auto" />
+                        <span className="text-xl font-semibold text-gray-800">Dashboard</span>
+                      </div>
+                      <div className="flex items-center gap-4">
+                        <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                          <span className="text-blue-600 font-medium">👤</span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Key Metrics Cards */}
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                      <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white p-6 rounded-2xl">
+                        <div className="flex items-center justify-between mb-2">
+                          <span className="text-sm opacity-90">Sales</span>
+                          <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                            💰
+                          </div>
+                        </div>
+                        <div className="text-2xl font-bold mb-1">KES 125,000</div>
+                        <div className="text-xs opacity-75 flex items-center gap-1">
+                          <span className="text-green-300">↗ +15%</span> from last month
+                        </div>
+                      </div>
+                      
+                      <div className="bg-gradient-to-br from-orange-500 to-orange-600 text-white p-6 rounded-2xl">
+                        <div className="flex items-center justify-between mb-2">
+                          <span className="text-sm opacity-90">Expenses</span>
+                          <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                            💳
+                          </div>
+                        </div>
+                        <div className="text-2xl font-bold mb-1">KES 85,000</div>
+                        <div className="text-xs opacity-75 flex items-center gap-1">
+                          <span className="text-red-300">↗ +8%</span> from last month
+                        </div>
+                      </div>
+                      
+                      <div className="bg-gradient-to-br from-green-500 to-green-600 text-white p-6 rounded-2xl">
+                        <div className="flex items-center justify-between mb-2">
+                          <span className="text-sm opacity-90">Purchases</span>
+                          <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                            🛍️
+                          </div>
+                        </div>
+                        <div className="text-2xl font-bold mb-1">KES 65,000</div>
+                        <div className="text-xs opacity-75 flex items-center gap-1">
+                          <span className="text-green-300">↗ +12%</span> from last month
+                        </div>
+                      </div>
+                      
+                      <div className="bg-gradient-to-br from-purple-500 to-purple-600 text-white p-6 rounded-2xl">
+                        <div className="flex items-center justify-between mb-2">
+                          <span className="text-sm opacity-90">Profit</span>
+                          <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center">
+                            📈
+                          </div>
+                        </div>
+                        <div className="text-2xl font-bold mb-1">KES 40,000</div>
+                        <div className="text-xs opacity-75">Net Profit Margin: 32%</div>
+                      </div>
+                    </div>
+                    
+                    {/* Charts Section */}
+                    <div className="grid lg:grid-cols-2 gap-6">
+                      <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
+                        <div className="flex items-center justify-between mb-4">
+                          <h3 className="font-semibold text-gray-800">Sales Performance</h3>
+                          <div className="text-sm text-gray-500">Weekly Sales • Aug 3 - Aug 9, 2025</div>
+                        </div>
+                        <div className="h-40 bg-gradient-to-t from-blue-50 to-transparent rounded-lg flex items-end justify-center">
+                          <div className="text-gray-400 text-sm">📊 Interactive Chart</div>
+                        </div>
+                      </div>
+                      
+                      <div className="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
+                        <h3 className="font-semibold text-gray-800 mb-4">Recent Activity</h3>
+                        <div className="space-y-3">
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                            <span className="text-sm text-gray-600">New invoice #INV-001 created</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                            <span className="text-sm text-gray-600">Payment received from Sarah K.</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
+                            <span className="text-sm text-gray-600">Expense recorded: Office supplies</span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                            <span className="text-sm text-gray-600">Stock alert: Product A running low</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-xl font-bold mb-2">Payroll System</h3>
-              <p className="text-gray-600 mb-4">
-                Calculate salaries, manage employee payments, and handle statutory deductions automatically.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li className="flex items-center">
-                  <span className="w-1.5 h-1.5 bg-accurate-purple-600 rounded-full mr-2"></span>
-                  <span>Tax calculation and reporting</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="w-1.5 h-1.5 bg-accurate-purple-600 rounded-full mr-2"></span>
-                  <span>Employee benefits management</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="w-1.5 h-1.5 bg-accurate-purple-600 rounded-full mr-2"></span>
-                  <span>Direct deposit integration</span>
-                </li>
-              </ul>
-            </div>
-            <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 animate-on-scroll" style={{ animationDelay: "0.4s" }}>
-              <div className="w-12 h-12 bg-accurate-purple-100 rounded-md flex items-center justify-center mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-accurate-purple-600">
-                  <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-2">Business Analytics</h3>
-              <p className="text-gray-600 mb-4">
-                Gain deeper insights into your business performance with customizable dashboards and reports.
-              </p>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li className="flex items-center">
-                  <span className="w-1.5 h-1.5 bg-accurate-purple-600 rounded-full mr-2"></span>
-                  <span>Sales forecasting</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="w-1.5 h-1.5 bg-accurate-purple-600 rounded-full mr-2"></span>
-                  <span>Profit margin analysis</span>
-                </li>
-                <li className="flex items-center">
-                  <span className="w-1.5 h-1.5 bg-accurate-purple-600 rounded-full mr-2"></span>
-                  <span>Custom report builder</span>
-                </li>
-              </ul>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-accurate-purple-600 to-accurate-blue-600 text-white">
-        <div className="container">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Simplify Your Business Operations?</h2>
-            <p className="text-xl opacity-90 mb-8">
-              Join thousands of SMEs across Africa who are already benefiting from MyAccurate Books.
-            </p>
-            <div className="flex flex-wrap gap-4 justify-center">
-              <Button size="lg" variant="secondary" asChild>
-                <Link to="/pricing">See Pricing Plans</Link>
-              </Button>
-              <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-accurate-purple-600" asChild>
-                <Link to="/contact">Book a Demo</Link>
-              </Button>
+        {/* CTA Section */}
+        <section className="py-20 bg-[#1E3A8A]">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+                Ready to streamline your business?
+              </h2>
+              <p className="text-xl text-white/90 mb-8">
+                Join thousands of businesses across Africa using MyAccurate Books
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button 
+                  size="lg" 
+                  className="bg-[#FF8C42] hover:bg-[#FF8C42]/90 text-white font-semibold px-8 py-4 text-lg rounded-lg"
+                  asChild
+                >
+                  <Link to="/pricing">Start Free Trial</Link>
+                </Button>
+                <Button 
+                  size="lg" 
+                  variant="outline" 
+                  className="border-2 border-white text-white hover:bg-white hover:text-[#1E3A8A] font-semibold px-8 py-4 text-lg rounded-lg"
+                  asChild
+                >
+                  <Link to="/demo">Schedule Demo</Link>
+                </Button>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
     </>
   );
 };

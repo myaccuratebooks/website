@@ -225,7 +225,7 @@ const DemoPage: React.FC = () => {
       </section>
       
       {/* Learning Paths Section */}
-      <section className="section-alt">
+      <section className="py-20 bg-gradient-to-br from-accurate-purple-50 to-accurate-blue-50">
         <div className="container">
           <SectionHeading title="Learning Paths" subtitle="Follow our structured learning paths to become a MyAccurate Books expert" alignment="center" />
           
@@ -263,7 +263,7 @@ const DemoPage: React.FC = () => {
                 <h3 className="text-lg font-semibold mb-3">{path.title}</h3>
                 <p className="text-gray-600 text-sm mb-4">{path.description}</p>
                 <div className="flex justify-between text-sm mb-4">
-                  <span className={`px-2 py-1 rounded-full bg-${path.color}-50 text-${path.color}-700`}>
+                  <span className={`px-2 py-1 rounded-full ${path.color === 'accurate-blue' ? 'bg-accurate-blue-50 text-accurate-blue-700' : 'bg-accurate-purple-50 text-accurate-purple-700'}`}>
                     {path.level}
                   </span>
                   <span className="text-gray-500">{path.duration}</span>
@@ -425,7 +425,7 @@ const DemoPage: React.FC = () => {
       </section>
       
       {/* FAQ Section */}
-    <section className="section-alt">
+    <section className="py-20 bg-gradient-to-br from-accurate-purple-50 to-accurate-blue-50">
       <div className="container max-w-8xl pb-10">
         <SectionHeading
           title="Frequently Asked Questions"
